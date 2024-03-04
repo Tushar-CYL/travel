@@ -1,0 +1,52 @@
+﻿.weatherItem {
+	padding: 0.8em;
+	text-align: left;
+}
+.weatherCity { text-transform: uppercase; }
+.weatherTemp {
+	font-size: 2.8em;
+	font-weight: bold;
+	margin:10px 0;
+}
+.weatherDesc, .weatherCity, .weatherForecastDay  { font-weight: bold; }
+.weatherDesc { margin-bottom: 0.4em; }
+.weatherRange, .weatherWind, .weatherLink, .weatherForecastItem { font-size:12px; display:inline-block; margin-right:10px;}
+.weatherLink, .weatherForecastItem {
+	margin-bottom: 0.5em;
+	text-align: left;
+}
+.weatherLink a {
+	display:block;
+	clear:both;
+	padding-top:10px;
+}
+.weatherForecastItem {
+	padding: 10px 10px 10px 80px;
+	background-position: left center;
+	width:100%;
+	border: 1px solid #ededed;
+	background-color:#fff;
+}
+.weatherForecastDay { font-size:14px; display:inline; margin-right:5px;}
+
+.odd { }
+.even { background-color: #d4d4e8; }
+
+.weatherItem.odd { float:left; width:48%; background-color:#f4fafe; margin-right:20px; border:1px solid#daf0fb;margin-bottom:15px; padding:30px 30px 30px 190px; }
+.weatherForecast{float:right; width:48% }
+
+.weatherForecastDate, .weatherForecastText, .weatherForecastRange{ display:inline; margin-right:15px; }
+
+/* Tablet Portrait size to standard 960 (devices and browsers) ================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+.weatherForecastItem {padding: 10px 10px 10px 72px;}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 767px) {
+.weatherForecastRange{ display:block; }
+.weatherItem.odd, .weatherForecast { float:none; width:100%;}
+
+}
+

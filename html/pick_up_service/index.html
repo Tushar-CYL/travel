@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>Travel</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/at1.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+    <link href="css/elegant_font/elegant_font.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons-master/css/simple-line-icons.css" rel="stylesheet">
+    <link href="css/car_icons/css/car.css" rel="stylesheet">
+    <link href="css/jquery.switch.css" rel="stylesheet">
+    <link href="css/weather.css" rel="stylesheet">
+    <link href="css/date_time_picker.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">
+            <div>
+                <img src="#" width="65" height="39" alt="" data-retina="true">Loading...please wait!
+            </div>
+        </div>
+    </div><!-- End Preloader -->
+
+    <div id="wrapper">
+        <div id="main">
+
+
+
+
+            <div id="main_container">
+
+                <div id="logo">
+                    <img src="img/tr.jpg" width="150" height="80" alt="Splendida" data-retina="true">
+                </div>
+
+                <ul id="lang_mobile">
+                    <li><a href="#" id="active_m">EN</a></li>
+                    <li><a href="#">FR</a></li>
+                </ul>
+
+                <nav>
+
+
+                    <!-- Start Booking Wizard-->
+                    <div id="form_container">
+
+                        <div id="top-wizard">
+                            <div id="progressbar"></div>
+                            <span id="location"></span>
+                        </div><!-- end top-wizard -->
+
+                        <form id="wrapped" method="POST">
+                            <input id="website" name="website" type="text"
+                                value=""><!-- Leave for security protection, read docs for details -->
+                            <div id="middle-wizard">
+
+                                <div class="step">
+                                    <div class="title">
+                                        <span>Booking Request</span>
+                                        <h3>Enter your booking details</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control required" type="text" name="pick_up" id="pick_up"
+                                            placeholder="Pick up address">
+                                        <i class="icon-arrow-up-circle"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control required" type="text" name="drop_off" id="drop_off"
+                                            placeholder="Drop off address">
+                                        <i class="icon-arrow-down-circle"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="required ddslick" name="car_type">
+                                            <option value="" data-imagesrc="img/icons_select/car_select.svg">Purpose
+                                            </option>
+                                            <option value="Small" data-imagesrc="img/icons_select/car_1.svg">Visiting
+                                                Home
+                                            </option>
+                                            <option value="Medium" data-imagesrc="img/icons_select/car_2.svg">Outing
+                                            </option>
+                                            <!-- <option value="Station wagon" data-imagesrc="img/icons_select/car_3.svg">Station
+                                            wagon</option>
+                                        <option value="Suv Large" data-imagesrc="img/icons_select/car_4.svg">Suv / Large
+                                        </option> -->
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form-group nomargin">
+                                                <input class="form-control date-pick required" type="text"
+                                                    name="date_pick" id="date_pick" placeholder="Date">
+                                                <i class="icon-car-calendar_2"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group nomargin">
+                                                <input class="time-pick form-control" value="12:00 AM" type="text"
+                                                    placeholder="Time" name="time_pick" id="time_pick">
+                                                <i class="icon-clock"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end step-->
+
+                                <div class="step">
+                                    <div class="title">
+                                        <span>Booking Request</span>
+                                        <h3>Enter your personal info</h3>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="firstname" id="firstname"
+                                            class=" form-control required" placeholder="First name">
+                                        <i class="icon-user"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="lastname" id="lastname" class=" form-control required"
+                                            placeholder="Last name">
+                                        <i class="icon-user"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class=" form-control required"
+                                            placeholder="Your Email">
+                                        <i class="icon-envelope"></i>
+                                    </div>
+                                    <div class="form-group nomargin">
+                                        <input type="text" name="telephone" id="telephone"
+                                            class=" form-control required" placeholder="Your Telephone">
+                                        <i class="icon-phone"></i>
+                                    </div>
+                                </div><!-- end step -->
+
+                                <div class="step">
+                                    <div class="title">
+                                        <span>Booking Request</span>
+                                        <h3>Add your booking options</h3>
+                                    </div>
+                                    <div class="form-group options clearfix first">
+                                        <em><i class="icon-car-baby_seat"></i>Singel Person <strong>250</strong></em>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" value="Baby seat" name="options[]">
+                                            <span><span>No</span><span>Yes</span></span>
+                                            <a></a>
+                                        </label>
+                                    </div>
+                                    <div class="form-group options clearfix">
+                                        <em><i class="icon-car-warm_seat"></i>Two Person<strong> 320</strong></em>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" value="Warm seat" name="options[]">
+                                            <span><span>No</span><span>Yes</span></span>
+                                            <a></a>
+                                        </label>
+                                    </div>
+                                    <div class="form-group options clearfix last">
+                                        <em><i class="icon-car-warm_seat"></i>Four Person<strong> 520</strong></em>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" value="Pet allowed" name="options[]">
+                                            <span><span>No</span><span>Yes</span></span>
+                                            <a></a>
+                                        </label>
+                                    </div>
+                                </div><!-- end step -->
+
+                                <div class="submit step" id="complete">
+                                    <i class="icon-emotsmile"></i>
+                                    <h3>Thank you for you time!</h3>
+                                    <button type="s" name="process" class="s">Submit your request</button>
+
+                                </div><!-- end submit step -->
+
+                            </div><!-- end middle-wizard -->
+
+                            <div id="bottom-wizard" class="clearfix">
+                                <strong>Or call us <a href="tel://004542344599">+91 8158079079</a></strong>
+                                <button type="button" name="backward" class="backward"></button>
+                                <button type="button" name="forward" class="forward"></button>
+                            </div><!-- end bottom-wizard -->
+
+                        </form>
+                    </div><!-- End Booking Wizard- -->
+
+
+            </div><!-- End main_container -->
+        </div><!-- End main -->
+
+        <!-- Modal  ROOMS===================== -->
+        <div id="modal-offers">
+
+            <div class="top_in">
+                <img src="img/logo_in.png" width="65" height="39" alt="" data-retina="true">
+                <h3>Travel</h3>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div><!-- End top_in -->
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="carousel">
+                            <div class="item">
+                                <img src="img/cr1.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/cr2.jpg" alt="" class="img-responsive">
+                            </div>
+                            <!-- <div class="item">
+                                <img src="img/car_1_3.jpg" alt="" class="img-responsive">
+                            </div> -->
+                        </div><!-- End carousel -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="styled">Small Car <strong>$110</strong><sup> (from)</sup><span> Pellentesque amet
+                                adipiscing scelerisque</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, pellentesque amet adipiscing scelerisque, vitae urna aenean,
+                            justo malesuada at eu, orci varius risus luctus enim a malesuada. Erat in tempor magna, eget
+                            porttitor posuere.
+                        </p>
+                        <ul class="additional_info">
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="2 Doors / 2 People"><i class="icon-car-2_doors"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Baby seat available"><i class="icon-car-baby_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Warm seat available"><i class="icon-car-warm_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Air Condition"><i class="icon-car-air_condition"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="ABS"><i class="icon-car-abs"></i></a></li>
+                        </ul>
+                        <p>
+                            <a href="#" class="modal-close booking">Book now</a>
+                        </p>
+                    </div>
+
+                </div><!-- End row -->
+
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="carousel">
+                            <div class="item">
+                                <img src="img/car_2_1.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/car_2_2.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/car_2_3.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div><!-- End carousel -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="styled">Medium Car <strong>$150</strong><sup> (from)</sup><span> Pellentesque amet
+                                adipiscing scelerisque</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, pellentesque amet adipiscing scelerisque, vitae urna aenean,
+                            justo malesuada at eu, orci varius risus luctus enim a malesuada. Erat in tempor magna, eget
+                            porttitor posuere.
+                        </p>
+                        <ul class="additional_info">
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="4 Doors / 5 People"><i class="icon-car-4_doors"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Baby seat available"><i class="icon-car-baby_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Warm seat available"><i class="icon-car-warm_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Air Condition"><i class="icon-car-air_condition"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="ABS"><i class="icon-car-abs"></i></a></li>
+                        </ul>
+                        <p>
+                            <a href="#" class="modal-close booking">Book now</a>
+                        </p>
+                    </div>
+                </div><!-- End row -->
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="carousel">
+                            <div class="item">
+                                <img src="img/car_3_1.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/car_3_2.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/car_3_3.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div><!-- End carousel -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="styled">Station Wagon <strong>$180</strong><sup> (from)</sup><span> Pellentesque amet
+                                adipiscing scelerisque</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, pellentesque amet adipiscing scelerisque, vitae urna aenean,
+                            justo malesuada at eu, orci varius risus luctus enim a malesuada. Erat in tempor magna, eget
+                            porttitor posuere.
+                        </p>
+                        <ul class="additional_info">
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="4 Doors / 6 People"><i class="icon-car-4_doors"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Baby seat available"><i class="icon-car-baby_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Warm seat available"><i class="icon-car-warm_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Air Condition"><i class="icon-car-air_condition"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="ABS"><i class="icon-car-abs"></i></a></li>
+                        </ul>
+                        <p>
+                            <a href="#" class="modal-close booking">Book now</a>
+                        </p>
+                    </div>
+
+                </div><!-- End row -->
+
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="carousel">
+                            <div class="item">
+                                <img src="img/car_4_1.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/car_4_2.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="item">
+                                <img src="img/car_4_3.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div><!-- End carousel -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="styled">SUV Large Car <strong>$190</strong><sup> (from)</sup><span> Pellentesque amet
+                                adipiscing scelerisque</span></h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, pellentesque amet adipiscing scelerisque, vitae urna aenean,
+                            justo malesuada at eu, orci varius risus luctus enim a malesuada. Erat in tempor magna, eget
+                            porttitor posuere.
+                        </p>
+                        <ul class="additional_info">
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="4 Doors / 8 People"><i class="icon-car-4_doors"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Baby seat available"><i class="icon-car-baby_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Warm seat available"><i class="icon-car-warm_seat"></i></a>
+                            </li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="Air Condition"><i class="icon-car-air_condition"></i></a></li>
+                            <li><a href="javascript:void(0);" class="tooltip-1" data-placement="top" title=""
+                                    data-original-title="ABS"><i class="icon-car-abs"></i></a></li>
+                        </ul>
+                        <p>
+                            <a href="#" class="modal-close booking">Book now</a>
+                        </p>
+                    </div>
+
+                </div><!-- End row -->
+
+                <hr>
+
+                <div class="table-responsive add_bottom_60">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Car Type
+                                </th>
+                                <th>
+                                    Low (23/03 to 31/05)
+                                </th>
+                                <th>
+                                    Middle (23/03 to 31/05)
+                                </th>
+                                <th>
+                                    High (23/03 to 31/05)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Small Car
+                                </td>
+                                <td>
+                                    110$
+                                </td>
+                                <td>
+                                    120$
+                                </td>
+                                <td>
+                                    140$
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Medium Car
+                                </td>
+                                <td>
+                                    150$
+                                </td>
+                                <td>
+                                    150$
+                                </td>
+                                <td>
+                                    180$
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Station Wagon
+                                </td>
+                                <td>
+                                    180$
+                                </td>
+                                <td>
+                                    150$
+                                </td>
+                                <td>
+                                    180$
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    SUV Large Car
+                                </td>
+                                <td>
+                                    190$
+                                </td>
+                                <td>
+                                    150$
+                                </td>
+                                <td>
+                                    180$
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- End Table responsive -->
+            </div><!-- End contianer -->
+            <div class="footer_in">
+                <strong><i class="icon_phone"></i> Call us at 0044 9887732</strong>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div>
+        </div><!-- End modal -->
+
+        <!-- Modal About -->
+        <div id="modal-about">
+            <a href="#" class="modal-close"><i class="icon_close"></i></a>
+
+            <div class="top_in">
+                <img src="img/logo_in.png" width="65" height="39" alt="" data-retina="true">
+                <h3>About Splendida</h3>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div>
+
+            <div class="container_gray">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="carousel" id="about">
+                                <div class="item">
+                                    <img src="img/about_1.jpg" alt="" class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="img/about_2.jpg" alt="" class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="img/about_3.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <!-- End carousel -->
+                        </div>
+                    </div>
+                    <!-- End row -->
+                    <div class="row add_bottom_30">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box_style_1">
+                                <span></span>
+                                <h3>Courtesy</h3>
+                                <p>
+                                    Esse dicit accusam duo an. Modus simul ei nec. Sea et <strong>explicari
+                                        pertinacia</strong>, cu vitae bonorum vocibus nec, corpora signiferumque no vim.
+                                    Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat
+                                    dissentiet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box_style_1">
+                                <span></span>
+                                <h3>Professionality</h3>
+                                <p>
+                                    Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, cu vitae
+                                    bonorum vocibus nec, <strong>corpora</strong> signiferumque no vim. Ad principes
+                                    scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="box_style_1 last">
+                                <span></span>
+                                <h3>Experience</h3>
+                                <p>
+                                    Esse dicit <strong>accusam duo an</strong>. Modus simul ei nec. Sea et explicari
+                                    pertinacia, cu vitae bonorum vocibus nec, corpora signiferumque no vim. Ad principes
+                                    scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet.
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End row -->
+                </div><!-- End container -->
+            </div><!-- End container_gray -->
+
+            <div class="container">
+                <div class="main_title add_bottom_30">
+                    <span></span>
+                    <h2>General facilities</h2>
+                    <p>
+                        Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-cartified_drivers"></i>
+                            <h3>Certified drivers</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-check_1"></i>
+                            <h3>Quality car check</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-h_24_support"></i>
+                            <h3>H24 availability</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-dog"></i>
+                            <h3>Pet allowed</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End row -->
+                <div class="row  add_bottom_30">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-parking"></i>
+                            <h3>Fast Parking</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-contact_phone_1"></i>
+                            <h3>Support</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-disable"></i>
+                            <h3>Disable</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box_feat">
+                            <i class="icon-car-credit_card"></i>
+                            <h3>Credit card</h3>
+                            <p>
+                                Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea.
+                                Ad nam modus iudico rationibus.
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End row -->
+                <hr>
+                <div class="main_title add_bottom_30">
+                    <span></span>
+                    <h2>Testimonials</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="row add_bottom_30">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="carousel" id="testimonial">
+                            <div>
+                                <blockquote class="testimonial">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
+                                        vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est,
+                                        in consequat. Donec hendrerit vehicula est, in consequat.
+                                    </p>
+                                </blockquote>
+                                <div class="testimonial-arrow-down">
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="img-thumbnail img-thumbnail-small">
+                                        <img src="img/avatar1.jpg" alt="">
+                                    </div>
+                                    <p>
+                                        <strong>Mark Smith</strong><span>20 March 2015</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <blockquote class="testimonial">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
+                                        vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.
+                                    </p>
+                                </blockquote>
+                                <div class="testimonial-arrow-down"></div>
+                                <div class="testimonial-author">
+                                    <div class="img-thumbnail img-thumbnail-small">
+                                        <img src="img/avatar2.jpg" alt="">
+                                    </div>
+                                    <p>
+                                        <strong>Lucas Fox</strong><span>31 April 2015</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <blockquote class="testimonial">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
+                                        vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est,
+                                        in consequat. Donec hendrerit vehicula est, in consequat.
+                                    </p>
+                                </blockquote>
+                                <div class="testimonial-arrow-down">
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="img-thumbnail img-thumbnail-small">
+                                        <img src="img/avatar3.jpg" alt="">
+                                    </div>
+                                    <p>
+                                        <strong>Loris Axell</strong><span>25 March 2015</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End carousel -->
+                    </div>
+                </div><!-- End row -->
+            </div><!-- End container -->
+
+            <div class="footer_in">
+                <strong><i class="icon_phone"></i> Call us at 0044 9887732</strong>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div>
+
+        </div> <!-- End modal -->
+
+        <!-- Modal Blog -->
+        <div id="modal-blog">
+            <a href="#" class="modal-close"><i class="icon_close"></i></a>
+
+            <div class="top_in">
+                <img src="img/logo_in.png" width="65" height="39" alt="" data-retina="true">
+                <h3>Splendida Blog</h3>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-9">
+                        <div class="post">
+                            <a href="blog_post.html"><img src="img/blog-1.jpg" alt="" class="img-responsive"></a>
+                            <div class="post_info clearfix">
+                                <div class="post-left">
+                                    <ul>
+                                        <li><i class="icon_calendar"></i> 12.05.2015</li>
+                                        <li><i class="icon_drawer_alt"></i> <a href="#">Category</a></li>
+                                        <li><i class="icon_tags_alt"></i> <a href="#">Works</a>, <a
+                                                href="#">Personal</a></li>
+                                    </ul>
+                                </div>
+                                <div class="post-right"><i class="icon_comment_alt"></i> <a href="#">25</a></div>
+                            </div>
+                            <h2>Duis aute irure dolor in reprehenderit</h2>
+                            <p>
+                                Ludus albucius adversarium eam eu. Sit eu reque tation aliquip. Quo no dolorum albucius
+                                lucilius, hinc eligendi ut sed. Ex nam quot ferri suscipit, mea ne legere alterum
+                                repudiandae. Ei pri quaerendum intellegebat, ut vel consequuntur voluptatibus. Et
+                                volumus sententiae adversarium duo......
+                            </p>
+                            <p>
+                                Ludus albucius adversarium eam eu. Sit eu reque tation aliquip. Quo no dolorum albucius
+                                lucilius, hinc eligendi ut sed. Ex nam quot ferri suscipit, mea ne legere alterum
+                                repudiandae. Ei pri quaerendum intellegebat, ut vel consequuntur voluptatibus. Et
+                                volumus sententiae adversarium duo......
+                            </p>
+                            <a href="blog_post.html" class="btn_1">Read more</a>
+                        </div><!-- end post -->
+
+                        <div class="post">
+                            <a href="blog_post.html"><img src="img/blog-2.jpg" alt="" class="img-responsive"></a>
+                            <div class="post_info clearfix">
+                                <div class="post-left">
+                                    <ul>
+                                        <li><i class="icon_calendar"></i> 12.05.2015</li>
+                                        <li><i class="icon_drawer_alt"></i> <a href="#">Category</a></li>
+                                        <li><i class="icon_tags_alt"></i> <a href="#">Works</a>, <a
+                                                href="#">Personal</a></li>
+                                    </ul>
+                                </div>
+                                <div class="post-right"><i class="icon_comment_alt"></i><a href="#">25 </a></div>
+                            </div>
+                            <h2>Duis aute irure dolor in reprehenderit</h2>
+                            <p>
+                                Ludus albucius adversarium eam eu. Sit eu reque tation aliquip. Quo no dolorum albucius
+                                lucilius, hinc eligendi ut sed. Ex nam quot ferri suscipit, mea ne legere alterum
+                                repudiandae. Ei pri quaerendum intellegebat, ut vel consequuntur voluptatibus. Et
+                                volumus sententiae adversarium duo......
+                            </p>
+                            <p>
+                                Ludus albucius adversarium eam eu. Sit eu reque tation aliquip. Quo no dolorum albucius
+                                lucilius, hinc eligendi ut sed. Ex nam quot ferri suscipit, mea ne legere alterum
+                                repudiandae. Ei pri quaerendum intellegebat, ut vel consequuntur voluptatibus. Et
+                                volumus sententiae adversarium duo......
+                            </p>
+                            <a href="blog_post.html" class="btn_1">Read more</a>
+                        </div><!-- end post -->
+
+                        <div class="post">
+                            <a href="blog_post.html"><img src="img/blog-3.jpg" alt="" class="img-responsive"></a>
+                            <div class="post_info clearfix">
+                                <div class="post-left">
+                                    <ul>
+                                        <li><i class="icon_calendar"></i> 12.05.2015</li>
+                                        <li><i class="icon_drawer_alt"></i> <a href="#">Category</a></li>
+                                        <li><i class="icon_tags_alt"></i> <a href="#">Works</a>, <a
+                                                href="#">Personal</a></li>
+                                    </ul>
+                                </div>
+                                <div class="post-right"><i class="icon_comment_alt"></i><a href="#">25 </a></div>
+                            </div>
+                            <h2>Duis aute irure dolor in reprehenderit</h2>
+                            <p>
+                                Ludus albucius adversarium eam eu. Sit eu reque tation aliquip. Quo no dolorum albucius
+                                lucilius, hinc eligendi ut sed. Ex nam quot ferri suscipit, mea ne legere alterum
+                                repudiandae. Ei pri quaerendum intellegebat, ut vel consequuntur voluptatibus. Et
+                                volumus sententiae adversarium duo......
+                            </p>
+                            <p>
+                                Ludus albucius adversarium eam eu. Sit eu reque tation aliquip. Quo no dolorum albucius
+                                lucilius, hinc eligendi ut sed. Ex nam quot ferri suscipit, mea ne legere alterum
+                                repudiandae. Ei pri quaerendum intellegebat, ut vel consequuntur voluptatibus. Et
+                                volumus sententiae adversarium duo......
+                            </p>
+                            <a href="blog_post.html" class="btn_1">Read more</a>
+                        </div><!-- end post -->
+
+                        <ul class="pager">
+                            <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                            <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        </ul>
+
+                    </div><!-- End col-md-9-->
+
+                    <aside class="col-md-3" id="sidebar">
+
+                        <div class="widget">
+                            <div id="custom-search-input-blog">
+                                <div class="input-group col-md-12">
+                                    <input type="text" class="form-control input-lg" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info btn-lg" type="button">
+                                            <i class="icon_search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Search -->
+                        <hr>
+                        <div class="widget">
+                            <h4>Categories</h4>
+                            <ul id="cat_nav_blog">
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Things to do</a></li>
+                                <li><a href="#">New Restaurants</a></li>
+                            </ul>
+                        </div><!-- End widget -->
+
+                        <hr>
+
+                        <div class="widget">
+                            <h4>Recent post</h4>
+                            <ul class="recent_post">
+                                <li>
+                                    <i class="icon_calendar"></i> 16th July, 2020
+                                    <div><a href="#">It is a long established fact that a reader will be distracted </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon_calendar"></i> 16th July, 2020
+                                    <div><a href="#">It is a long established fact that a reader will be distracted </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon_calendar"></i> 16th July, 2020
+                                    <div><a href="#">It is a long established fact that a reader will be distracted </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- End widget -->
+                        <div class="widget tags">
+                            <h4>Tags</h4>
+                            <a href="#">Lorem ipsum</a>
+                            <a href="#">Dolor</a>
+                            <a href="#">Long established</a>
+                            <a href="#">Sit amet</a>
+                            <a href="#">Latin words</a>
+                            <a href="#">Excepteur sint</a>
+                        </div><!-- End widget -->
+
+                    </aside><!-- End aside -->
+
+                </div><!-- End row -->
+            </div><!-- End container -->
+
+            <div class="footer_in">
+                <strong><i class="icon_phone"></i> Call us at 0044 9887732</strong>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div>
+
+        </div><!-- End modal  blog-->
+
+        <!-- Modal  Contacts -->
+        <div id="modal-contacts">
+
+            <div class="top_in">
+                <img src="img/logo_in.png" width="65" height="39" alt="" data-retina="true">
+                <h3>Contact us</h3>
+                <a href="#" class="modal-close"><i class="icon_close"></i></a>
+            </div>
+
+            <div class="container">
+                <div id="map"></div><!-- end map-->
+                <div id="get_directions">
+                    <form action="http://maps.google.com/maps" method="get" target="_blank">
+                        <div class="input-group">
+                            <input type="text" name="saddr" placeholder="Enter your full address" class="form-control">
+                            <input type="hidden" name="daddr"
+                                value="New York, NY 11430" /><!-- Write here your end point -->
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit" value="Get directions" style="margin-left:0;">Get
+                                    directions</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </form>
+                </div><!-- End row -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="add_bottom_20">Contacts info</h4>
+                        <ul id="contact_info">
+                            <li><strong>Address</strong> Street Number & Name - Postal Code 2034 BXU</li>
+                            <li><strong>Telephone</strong><a href="tel://004542344599">+45 423 445 99</a> / <a
+                                    href="tel://004542344599">+45 423 445 99</a></li>
+                            <li><strong>Email</strong><a href="#0">info@emailaddress.com</a> - <a
+                                    href="#">www.splendida.com</a></li>
+                        </ul>
+                        <ul id="social">
+                            <li><a href="#0"><i class="social_facebook_square"></i></a></li>
+                            <li><a href="#0"><i class="social_googleplus_square"></i></a></li>
+                            <li><a href="#0"><i class="social_twitter_square"></i></a></li>
+                            <li><a href="#0"><i class="social_pinterest_square"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <h4 class="add_bottom_20">How to reach us</h4>
+                        <ul id="reach_us">
+                            <li><i class="icon-car-airplane"></i>
+                                <h5>From the Airport</h5>
+                                Decore periculis an duo, bonorum persecuti in vix. Propriae consequuntur mea ex, eum ea
+                                nostrud fabellas, per case platonem ea. Labore expetendis quaerendum no eam, quo eu quem
+                                vide incorrupte. No ignota labore duo.
+                            </li>
+                            <li><i class="icon-car-train"></i>
+                                <h5>From the Station</h5>
+                                Duo ludus partiendo ne. Id eum purto natum liberavisse, mea an harum viris, nec graeco
+                                legendos erroribus cu. Et usu doctus iisque, ea labores adipisci moderatius usu.
+                            </li>
+                            <li><i class="icon-car-car"></i>
+                                <h5>By car</h5>
+                                Ut expetenda iudicabit usu. At unum apeirian usu, no paulo aliquid probatus sed. Tantas
+                                iudicabit in eam, per saepe impetus commune at, tantas graeco ad est. Vim impetus
+                                percipitur cu, scaevola perfecto mediocritatem ad nam.
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- End row -->
+
+            </div><!-- End conainer -->
+        </div><!-- End modal -->
+    </div><!-- End wrapper -->
+
+    <div id="slides">
+        <ul class="slides-container">
+            <li><img src="img/auto.jpg" alt=""></li>
+            <li><img src="img/cr1.jpg" alt=""></li>
+            <!-- <li><img src="img/cr2.jpg" alt=""></li> -->
+
+        </ul>
+    </div><!-- End background slider -->
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui-1.8.22.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-timepicker.js"></script>
+    <script src="js/functions.js"></script>
+
+    <!-- GOOGLE MAP -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/mapmarker.jquery.min.js"></script>
+
+</body>
+
+</html>
